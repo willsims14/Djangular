@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Djangular</title>
+</head>
+<body ng-app="myapp">
+
+<div ng-include="'partials/navbar.html'"></div>
+
+<h1>Djangular</h1>
+
+<div ng-view></div>
+
+
+
+
+
+<!-- Dependencies -->
+<script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- App -->
+<script type="text/javascript" src="app/app.js"></script>
+<!-- Factories -->
+<script type="text/javascript" src="app/factories/RootFactory.js"></script>
+<!-- Controllers -->
+<script type="text/javascript" src="app/controllers/AuthController.js"></script>
+<script type="text/javascript" src="app/controllers/ProductsController.js"></script>
+</body>
+</html>
