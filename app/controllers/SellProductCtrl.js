@@ -51,6 +51,9 @@ function($scope, $http, $location, RootFactory, apiUrl, $routeParams, $log) {
         }).then(
             res => {
                 console.log("Response!!!: ", res);
+                var user_token = "Token " + RootFactory.getToken();
+                console.log("Response Token: ", res.data.token);
+                console.log("RootFactory Token: ", user_token);
                 if (res.data.token !== "") {
                     $location.path('/products');
                 }
