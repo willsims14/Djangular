@@ -8,24 +8,17 @@ angular.module('myapp').controller('ProductsController', [
   'apiUrl',
 function($scope, $http, $location, RootFactory, apiUrl) {
 
-
-    $http({
-        url: `${apiUrl}/products`,
-        method: "GET",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-            'Authorization': "Token " + RootFactory.getToken()
-        }
-    }).then(
-        res => {
-            RootFactory.setToken(res.data.token);
-            if(res.data.token !== ""){
+    // Authenticate user
+    RootFactory.getApiRoot()
+        .then( (root) => {
+            $http({
+                url: `${root.products}`,
+                headers: {
+                'Authorization': "Token " + RootFactory.getToken()
+                }
+            }).then( function(res) {
                 $scope.products = res.data.results;
-            }
-        },
-        console.error
-    );
-
-
-
-}]);
+                console.log("Products: ", $scope.products);
+            });
+        });
+    }]);

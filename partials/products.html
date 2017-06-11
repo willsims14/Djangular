@@ -3,11 +3,14 @@
 <hr>
 
 <div ng-repeat="product in products">
-<h3>((product.title)) </h3>
-<ul>
-    <li>Price: ((product.price))</li>
-    <li>Customer: ((product.customer))</li>
-    <li>Type: ((product.product_type))</li>
-</ul>
+<section class="col-sm-3">
+    <h3><a href="/#!/products/((product.id))/((product.title))">((product.title))</a></h3>
+    <ul>
+        <li>Price: ((product.price))</li>
+        <li>ID: ((product.id))</li>
+        <li>Customer: ((product.customer))</li>
+        <li>Type: ((product.product_type))</li>
+    </ul>
+</section>
 
 </div>

@@ -9,7 +9,7 @@ angular.module('myapp').controller('AuthController', [
 function($scope, $http, $location, RootFactory, apiUrl) {
 
 
-
+    console.log("API URL: ", apiUrl);
 
 
     $scope.register = function() {
@@ -30,7 +30,7 @@ function($scope, $http, $location, RootFactory, apiUrl) {
                 RootFactory.setToken(res.data.token);
                 if(res.data.token !== ""){
                     // $cookie.write
-                    $location.path('/products')
+                    $location.path('/products');
                 }
             },
             console.error
@@ -50,7 +50,6 @@ function($scope, $http, $location, RootFactory, apiUrl) {
                 console.log("RESPONSE: ", res);
                 RootFactory.setToken(res.data.token);
                 if (res.data.token !== "") {
-                    console.log("LOGGED IN");
                     $location.path('/products');
                 }
             },
@@ -62,9 +61,9 @@ function($scope, $http, $location, RootFactory, apiUrl) {
         $scope.user = {
             username: "will",
             password: "sims"
-        }
-        $scope.login()
-    }
+        };
+        $scope.login();
+    };
 
 }]);
 

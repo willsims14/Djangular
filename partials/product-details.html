@@ -1,0 +1,9 @@
+<h1>Product Details</h1>
+
+<h3>((current_product.title)) <small>(ID: ((current_product.id)))</small></h3>
+<ul>
+    <li>Price: ((current_product.price))</li>
+    <li>Description: ((current_product.description))</li>
+    <li>Seller: ((current_product.customer))</li>
+    <input type="submit" value="delete" ng-click='deleteProduct(current_product.id)'>
+</ul>

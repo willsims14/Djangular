@@ -9,8 +9,6 @@
 
 <div ng-include="'partials/navbar.html'"></div>
 
-<h1>Djangular</h1>
-
 <div ng-view></div>
 
 
@@ -18,6 +16,7 @@
 
 
 <!-- Dependencies -->
+<script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="lib/node_modules/angular/angular.min.js"></script>
 <script type="text/javascript" src="lib/node_modules/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -28,5 +27,10 @@
 <!-- Controllers -->
 <script type="text/javascript" src="app/controllers/AuthController.js"></script>
 <script type="text/javascript" src="app/controllers/ProductsController.js"></script>
+<script type="text/javascript" src="app/controllers/ProductTypesController.js"></script>
+<script type="text/javascript" src="app/controllers/SingleProductTypeController.js"></script>
+<script type="text/javascript" src="app/controllers/ShoppingCartCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/SingleProductCtrl.js"></script>
+<script type="text/javascript" src="app/controllers/SellProductCtrl.js"></script>
 </body>
 </html>
